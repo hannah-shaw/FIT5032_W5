@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fit5032_MyViewModel", "Fit5032_MyViewModel\Fit5032_MyViewModel.csproj", "{0239D53F-CDC1-452D-897E-F78ACC9240BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0239D53F-CDC1-452D-897E-F78ACC9240BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0239D53F-CDC1-452D-897E-F78ACC9240BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0239D53F-CDC1-452D-897E-F78ACC9240BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0239D53F-CDC1-452D-897E-F78ACC9240BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11589539-5110-4A26-9226-1D534534A2EA}
+	EndGlobalSection
+EndGlobal
