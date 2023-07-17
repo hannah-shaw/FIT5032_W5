@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FIT5032_MyIdentity.Models;
+using Microsoft.AspNet.Identity;
 
 namespace FIT5032_MyIdentity.Controllers
 {
@@ -15,9 +16,12 @@ namespace FIT5032_MyIdentity.Controllers
         private FIT5032_Model1 db = new FIT5032_Model1();
 
         // GET: Students
+        [Authorize]
         public ActionResult Index()
         {
-            return View(db.Students.ToList());
+            var userId = User.Identity.GetUserId();
+            var students = db.Students.Where(s => s.UserId == userId).ToList();
+            return View(students);
         }
 
         // GET: Students/Details/5
@@ -46,15 +50,19 @@ namespace FIT5032_MyIdentity.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,UserId")] Student student)
+        [Authorize]
+        public ActionResult Create([Bind(Include = "Id,FirstName,LastName")] Student student)
         {
+            student.UserId = User.Identity.GetUserId();
+            ModelState.Clear();
+            TryValidateModel(student);
+
             if (ModelState.IsValid)
             {
                 db.Students.Add(student);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(student);
         }
 
