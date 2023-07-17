@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.vb" Inherits="FIT5032_MyIdentity.MvcApplication" Language="VB" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="FIT5032_MyIdentity.MvcApplication" Language="C#" %>
